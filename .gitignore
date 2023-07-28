@@ -1,0 +1,7 @@
+.vscode
+*.dSYM
+*.swp
+*.swo
+*.swn
+.DS_Store
+mediaLoading
