@@ -1,4 +1,4 @@
-// Adding
+// Adding Shapes and Text to an image
 
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/highgui.hpp>
