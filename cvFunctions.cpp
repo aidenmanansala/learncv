@@ -22,7 +22,7 @@ int main() {
 
     Mat kernel = getStructuringElement(MORPH_RECT, Size(3, 3)); // creates a kernel for dilation
     dilate(imgCanny, imgDil, kernel); // dilate edge lines from the canny algo (can be applied to anything)
-    erode(imgCanny, imgErode, kernel); // erode edge lines from the canny algo 
+    erode(imgDil, imgErode, kernel); // erode the dilated edges
 
     imshow("image", img);
     imshow("Image Gray", imgGray);
@@ -31,4 +31,4 @@ int main() {
     imshow("Image Dilation", imgDil);
     imshow("Image Erosion", imgErode);
     waitKey(0);
-}
+} 
