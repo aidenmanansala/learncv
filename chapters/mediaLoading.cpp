@@ -10,7 +10,7 @@ using namespace std;
 
 int main(){
     // images
-    string imagePath = "shapes.jpeg"; // define the path to the image file
+    string imagePath = "assets/shapes.jpeg"; // define the path to the image file
     Mat image = imread(imagePath); // store the image data inside a matrix
     imshow("Image", image); // display the matrix, title it "Image"
     waitKey(15000); // wait 15 seconds
@@ -19,7 +19,7 @@ int main(){
 
     
     // videos
-    string videoPath = "zoo.mp4"; // define the path to the video
+    string videoPath = "assets/zoo.mp4"; // define the path to the video
 
     // VideoCapture allows us to read frames from the video and work with it frame by frame.
     VideoCapture cap(videoPath); // create a VideoCapture object named 'cap' to open and access the video

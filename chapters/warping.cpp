@@ -1,4 +1,5 @@
 // Warping perspective on images
+// Taking images at an angle, and making them have a "birds eye view" perspective
 
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/highgui.hpp>
@@ -8,14 +9,15 @@
 using namespace cv;
 using namespace std;
 
-float w = 250, h = 350;
+// it is possible that the dimensions/coordinates will be different across other OS's and software
+float w = 140, h = 190;
 Mat matrix, imgWarp;
 
 int main() {
-    string path = "cards.png";
+    string path = "assets/cards.png";
     Mat img = imread(path);
 
-    Point2f src[4] = {{529, 142}, {771, 190}, {405, 395}, {675, 457}};
+    Point2f src[4] = {{299, 77}, {444, 110}, {225, 225}, {391, 263}};
     Point2f dst[4] = {{0.0f, 0.0f}, {w, 0.0f}, {0.0f, h}, {w, h}};
 
     matrix = getPerspectiveTransform(src, dst);

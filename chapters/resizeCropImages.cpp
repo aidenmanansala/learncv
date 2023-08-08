@@ -9,7 +9,7 @@ using namespace cv;
 using namespace std;
 
 int main(){
-    string path = "shapes.jpeg";
+    string path = "assets/shapes.jpeg";
     Mat img = imread(path);
     Mat imgResize, imgScale, imgCrop;
 
