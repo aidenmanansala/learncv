@@ -17,11 +17,11 @@ int main() {
     string path = "assets/cards.png";
     Mat img = imread(path);
 
-    Point2f src[4] = {{299, 77}, {444, 110}, {225, 225}, {391, 263}};
-    Point2f dst[4] = {{0.0f, 0.0f}, {w, 0.0f}, {0.0f, h}, {w, h}};
+    Point2f src[4] = {{299, 77}, {444, 110}, {225, 225}, {391, 263}}; // coordinates of card in OG image
+    Point2f dst[4] = {{0.0f, 0.0f}, {w, 0.0f}, {0.0f, h}, {w, h}}; // cooresponding coordinates of card in warped perspective
 
-    matrix = getPerspectiveTransform(src, dst);
-    warpPerspective(img, imgWarp, matrix,Point(w, h));
+    matrix = getPerspectiveTransform(src, dst); // creates the transform matrix
+    warpPerspective(img, imgWarp, matrix,Point(w, h)); // warps perspective to birds eye view
 
     imshow("Image", img);
     imshow("Image Warp", imgWarp);
